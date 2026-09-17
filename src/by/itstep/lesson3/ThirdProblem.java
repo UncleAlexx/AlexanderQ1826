@@ -1,7 +1,9 @@
 package by.itstep.lesson3;
 
 public class ThirdProblem {
-    public int getSumOfOddEven (int [] numbers){
+  
+    public int getSumDifferenceOfElemsWithEvenOddIndexes (int [] numbers){
+
         if(numbers == null || numbers.length == 0)
             return 0;
         int sum = numbers[0];

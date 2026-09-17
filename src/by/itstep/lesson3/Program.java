@@ -12,6 +12,6 @@ public class Program {
 
        System.out.println( new SecondProblem().sumMinMax(new int[]{1,2,4,-1}));
 
-       System.out.println(new ThirdProblem().getSumOfOddEven(new int[]{0,-10}));
+       System.out.println(new ThirdProblem().getSumDifferenceOfElemsWithEvenOddIndexes(new int[]{0,-10}));
     }
 }
