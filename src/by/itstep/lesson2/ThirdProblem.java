@@ -1,15 +1,11 @@
 package by.itstep.lesson2;
 
-import java.util.Scanner;
-
-import static java.lang.System.out;
-
 public class ThirdProblem {
 
-    public  int SumOfThreeMultipliplesBetween(int a, int b){
+    public  int SumOfThreeMultiplesBetween(int a, int b){
 
-        int max = a > b?a : b;
-        int firstThreeMultiple = a == max? b :a;
+        int max = a > b? a : b;
+        int firstThreeMultiple = a == max? b : a;
 
         for (int i = firstThreeMultiple; i <= firstThreeMultiple + 2; i++){
             if(i % 3 == 0){
@@ -19,7 +15,7 @@ public class ThirdProblem {
         }
         var sum = 0;
 
-        for(; firstThreeMultiple <=max; firstThreeMultiple +=3){
+        for(; firstThreeMultiple <= max; firstThreeMultiple += 3){
             sum += firstThreeMultiple;
         }
         return  sum;

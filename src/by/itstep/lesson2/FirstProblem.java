@@ -1,47 +1,35 @@
 package by.itstep.lesson2;
 
-import static java.lang.System.out;
-
 public class FirstProblem {
 
-    public void PrintVowelOrConsonantSwitch(char letter){
-        if (Character.isLetter(letter)) {
-            letter = Character.toLowerCase(letter);
-        }
+    private static final String NOT_LETTER_MESSAGE = "Not a letter";
+    private static final String VOWEL_MESSAGE = "A vowel";
+    private static final String CONSONANT_MESSAGE = "A consonant";
 
-        switch (letter){
-            case 'a': case 'e': case 'i': case 'o': case 'u':
-                out.println("Гласная");
-                break;
-            case 'b': case 'c': case 'd': case 'f': case 'g':
-            case 'h': case 'j': case 'k': case 'l': case 'm':
-            case 'n': case 'p': case 'q': case 'r': case 's':
-            case 't': case 'v': case 'w': case 'x': case 'y': case 'z':
-                out.println("Согласная");
-                break;
-            default:
-                out.println("Не буква");
+    public String GetIsVowelMessageWithSwitch(char letter){
+
+        if(Integer.compareUnsigned(letter - 'a', 'z' - 'a') <= 0){
+            switch (letter){
+                case 'a': case 'e': case 'i': case 'o': case 'u':
+                    return VOWEL_MESSAGE;
+                default:
+                    return CONSONANT_MESSAGE;
+            }
         }
+        return NOT_LETTER_MESSAGE;
     }
 
-    public void PrintVowelOrConsonant(char letter){
-        if(Character.isLetter(letter))
-        {
-            letter = Character.toLowerCase(letter);
-        }
+    public boolean isVowel(char letter) {
+        return letter == 'a' || letter == 'i' || letter == 'u' || letter == 'e' || letter == 'o';
+    }
 
-        if (((((letter >> 1) & 1) ^ (letter>> 2 & 1)) == 0 && (letter & 0b11111001) == 0b01101001)
-                || (letter & 0b11111011) == 0b01100001 || (letter & 0b11111001) == 0b11111001)
-        {
-            out.println(letter +" гласная");
-        }
-        else if(Integer.compareUnsigned(letter - 'a', 'z' - 'a') <= 0)
-        {
-            out.println(letter +" согласная");
-        }
-        else
-        {
-            out.println("i не буква");
-        }
+    public String GetIsVowelMessageWithIf(char letter){
+
+        letter = Character.toLowerCase(letter);
+
+        if(Integer.compareUnsigned(letter - 'a', 'z' - 'a') <= 0)
+            return isVowel(letter)? VOWEL_MESSAGE : CONSONANT_MESSAGE;
+
+        return NOT_LETTER_MESSAGE;
     }
 }
