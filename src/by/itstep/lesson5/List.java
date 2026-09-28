@@ -11,7 +11,7 @@ public final class List {
         buffer = new Object[initialLength];
     }
 
-    public void Add(Object item){
+    public void add(Object item){
         current++;
         if(current > buffer.length - 1)
            Grow();
