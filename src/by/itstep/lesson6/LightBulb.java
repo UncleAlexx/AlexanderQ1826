@@ -1,4 +1,4 @@
-package lesson6;
+package by.itstep.lesson6;
 
 public class LightBulb extends HomeDevice implements EnergyEfficient{
     public Color color;

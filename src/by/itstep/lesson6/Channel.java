@@ -1,4 +1,4 @@
-package lesson6;
+package by.itstep.lesson6;
 
 public class Channel {
     public final String channelName;

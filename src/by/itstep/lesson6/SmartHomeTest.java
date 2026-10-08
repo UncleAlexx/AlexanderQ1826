@@ -1,4 +1,4 @@
-package lesson6;
+package by.itstep.lesson6;
 
 import static java.lang.IO.println;
 
