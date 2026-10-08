@@ -1,4 +1,4 @@
-package lesson6;
+package by.itstep.lesson6;
 
 public class Thermostat extends HomeDevice implements Switchable, Controllable{
     private double temperature;

@@ -1,4 +1,4 @@
-package lesson6;
+package by.itstep.lesson6;
 
 public class HomeDeviceExtensions {
     public static boolean isBetween(double target, double lowerBound, double upperBound){
